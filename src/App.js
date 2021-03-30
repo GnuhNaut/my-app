@@ -2,12 +2,14 @@ import './App.css';
 import { 
   Button,
   Input,
-  Menu
+  Select,
+  Checkbox
 } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
+const { Option } = Select;
 
-import React from "react"
 function App() {
+  const options = [{ value: 'gold' }, { value: 'lime' }, { value: 'green' }, { value: 'cyan' }];
   return (
     <div>
       
@@ -35,6 +37,39 @@ function App() {
     <Input.Password placeholder="input password" />
     <br/>
     <br/>
+    <Select defaultValue="lucy" >
+      <Option value="jack">Jack</Option>
+      <Option value="lucy">Lucy</Option>
+      <Option value="disabled" disabled>
+        Disabled
+      </Option>
+      <Option value="Yiminghe">yiminghe</Option>
+    </Select>
+    <br/><br/>
+    <Select defaultValue="lucy" disabled>
+      <Option value="jack">Jack</Option>
+      <Option value="lucy">Lucy</Option>
+      <Option value="disabled" disabled>
+        Disabled
+      </Option>
+      <Option value="Yiminghe">yiminghe</Option>
+    </Select>
+    <br/><br/>
+    <Select
+    mode="multiple"
+    showArrow
+    defaultValue={['gold', 'cyan']}
+    options={options}
+  />
+  <br/><br/>
+      <Checkbox >
+        Hello
+      </Checkbox>
+      <br/><br/>
+      <Checkbox checked="true" disabled>
+        Hello
+      </Checkbox>
+      <br/><br/>
   </div>
     
   );
