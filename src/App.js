@@ -3,13 +3,23 @@ import {
   Button,
   Input,
   Select,
-  Checkbox
+  Checkbox,
+  Radio,
+  Tag,
+  Switch
 } from 'antd';
+import React from "react";
 import { DownOutlined } from '@ant-design/icons';
 const { Option } = Select;
 
 function App() {
+  const [value, setValue] = React.useState(1);
+
   const options = [{ value: 'gold' }, { value: 'lime' }, { value: 'green' }, { value: 'cyan' }];
+  const onChange = e => {
+    console.log('radio checked', e.target.value);
+    setValue(e.target.value);
+  };
   return (
     <div>
       
@@ -70,6 +80,22 @@ function App() {
         Hello
       </Checkbox>
       <br/><br/>
+      <Radio.Group onChange={onChange} value={value}>
+      <Radio value={1}>A</Radio>
+      <Radio value={2}>B</Radio>
+      <Radio value={3} disabled>C</Radio>
+    </Radio.Group>
+    <Radio value={4} disabled defaultChecked>D</Radio>
+    <br/><br/>
+    <Tag closable >
+          Movies
+    </Tag>
+    <br/> <br/>
+    <Switch />
+    <Switch defaultChecked/>
+    <Switch disabled/>
+    <Switch defaultChecked disabled/>
+    <br/><br/>
   </div>
     
   );

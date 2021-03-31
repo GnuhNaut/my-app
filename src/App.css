@@ -7447,7 +7447,7 @@ a.ant-btn-sm {
 .ant-radio-wrapper:hover .ant-radio,
 .ant-radio:hover .ant-radio-inner,
 .ant-radio-input:focus + .ant-radio-inner {
-  border-color: #1890ff;
+  border-color: #6979F8;
 }
 .ant-radio-input:focus + .ant-radio-inner {
   box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.08);
@@ -7476,12 +7476,12 @@ a.ant-btn-sm {
   top: 0;
   left: 0;
   display: block;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   background-color: #fff;
-  border-color: #d9d9d9;
+  border-color: #6979F8;
   border-style: solid;
-  border-width: 1px;
+  border-width: 2px;
   border-radius: 50%;
   transition: all 0.3s;
 }
@@ -7490,9 +7490,9 @@ a.ant-btn-sm {
   top: 3px;
   left: 3px;
   display: table;
-  width: 8px;
-  height: 8px;
-  background-color: #1890ff;
+  width: 14px;
+  height: 14px;
+  background-color: #6979F8;
   border-top: 0;
   border-left: 0;
   border-radius: 8px;
@@ -7512,7 +7512,7 @@ a.ant-btn-sm {
   opacity: 0;
 }
 .ant-radio-checked .ant-radio-inner {
-  border-color: #1890ff;
+  border-color: #6979F8;
 }
 .ant-radio-checked .ant-radio-inner::after {
   transform: scale(1);
@@ -8763,7 +8763,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: rgba(0, 0, 0, 0.85);
+  color: #6979F8;
   font-size: 14px;
   font-variant: tabular-nums;
   line-height: 1.5715;
@@ -8774,18 +8774,19 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
   margin-right: 8px;
   padding: 0 7px;
   font-size: 12px;
-  line-height: 20px;
+  line-height: 24px;
   white-space: nowrap;
-  background: #fafafa;
-  border: 1px solid #d9d9d9;
-  border-radius: 2px;
+  background: #E5E7FA;
+  border: 1px solid #E5E7FA;
+  border-radius: 4px;
   opacity: 1;
   transition: all 0.3s;
 }
 .ant-tag,
 .ant-tag a,
 .ant-tag a:hover {
-  color: rgba(0, 0, 0, 0.85);
+  color: #6979F8;
+  font-size: 11px;
 }
 .ant-tag > a:first-child:last-child {
   display: inline-block;
@@ -8794,7 +8795,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
 }
 .ant-tag-close-icon {
   margin-left: 3px;
-  color: rgba(0, 0, 0, 0.45);
+  color: #6979F8;
   font-size: 10px;
   cursor: pointer;
   transition: all 0.3s;
@@ -16410,7 +16411,7 @@ textarea.ant-input {
   outline: none;
   cursor: pointer;
   border-radius: 6px;
-  box-shadow: 2px 2px 2px 2px #092c4c0d;
+  box-shadow: 1px 1px 1px 1px #092C4C0D;
 }
 .ant-checkbox-wrapper:hover .ant-checkbox-inner,
 .ant-checkbox:hover .ant-checkbox-inner,
@@ -22712,19 +22713,20 @@ textarea.ant-mentions {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
-  min-width: 44px;
-  height: 22px;
-  line-height: 22px;
+  min-width: 48px;
+  height: 28px;
+  line-height: 28px;
   vertical-align: middle;
-  background-color: rgba(0, 0, 0, 0.25);
-  border: 0;
-  border-radius: 100px;
+  background-color: #fff;
+  border: 0 #fff;
+  border-radius: 16px;
   cursor: pointer;
   transition: all 0.2s;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  box-shadow: 0px 0px 10px 10px #092C4C0D;  
 }
 .ant-switch:focus {
   outline: 0;
@@ -22737,12 +22739,15 @@ textarea.ant-mentions {
   box-shadow: none;
 }
 .ant-switch-checked {
-  background-color: #1890ff;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px 1px #092C4C0D;  
 }
 .ant-switch-loading,
 .ant-switch-disabled {
   cursor: not-allowed;
   opacity: 0.4;
+  background-color: #ECE9F1;
+  border-color: #ECE9F1;
 }
 .ant-switch-loading *,
 .ant-switch-disabled * {
@@ -22773,14 +22778,22 @@ textarea.ant-mentions {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #fff;
-  border-radius: 9px;
+  background-color: #ECE9F1;
+  border-radius: 100%;
   box-shadow: 0 2px 4px 0 rgba(0, 35, 11, 0.2);
   transition: all 0.2s ease-in-out;
   content: '';
+  height: 24px;
+  width: 24px;
 }
 .ant-switch-checked .ant-switch-handle {
-  left: calc(100% - 18px - 2px);
+  left: calc(100% - 24px - 2px);
+}
+.ant-switch-checked .ant-switch-handle::before {
+  background-color: #BD7AE3;
+}
+.ant-switch-disabled .ant-switch-handle::before{
+  background-color: #D0C9D6;
 }
 .ant-switch:not(.ant-switch-disabled):active .ant-switch-handle::before {
   right: -30%;
